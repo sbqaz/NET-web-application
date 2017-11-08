@@ -1,0 +1,10 @@
+D:\Git\deployment-studie-job\bin\Debug\netcoreapp2.0\deployment-studie-job.deps.json
+D:\Git\deployment-studie-job\bin\Debug\netcoreapp2.0\deployment-studie-job.runtimeconfig.json
+D:\Git\deployment-studie-job\bin\Debug\netcoreapp2.0\deployment-studie-job.runtimeconfig.dev.json
+D:\Git\deployment-studie-job\bin\Debug\netcoreapp2.0\deployment-studie-job.dll
+D:\Git\deployment-studie-job\bin\Debug\netcoreapp2.0\deployment-studie-job.pdb
+D:\Git\deployment-studie-job\obj\Debug\netcoreapp2.0\deployment-studie-job.csproj.CoreCompileInputs.cache
+D:\Git\deployment-studie-job\obj\Debug\netcoreapp2.0\deployment-studie-job.AssemblyInfoInputs.cache
+D:\Git\deployment-studie-job\obj\Debug\netcoreapp2.0\deployment-studie-job.AssemblyInfo.cs
+D:\Git\deployment-studie-job\obj\Debug\netcoreapp2.0\deployment-studie-job.dll
+D:\Git\deployment-studie-job\obj\Debug\netcoreapp2.0\deployment-studie-job.pdb
