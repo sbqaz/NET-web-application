@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class='panel-heading'>\n  Hi\n</h2>\n<hr/>\n<!-- ngFor to iterate through the folder names! -->\n\n<h2>Deployment Form</h2>\n\n<div class=\"form-group\">\n  <label for=\"hqBuild\">Select HQ Build</label>\n  <select class=\"form-control\" id=\"hqBuild\" required>\n    <option *ngFor=\"let hqBuild of hqBuilds\" [value]=\"Build\">{{hqBuild.name}}</option>\n  </select>\n</div>\n\n<div class=\"form-group\">\n  <label for=\"hqInstallationType\">Select HQ installation type</label>\n  <select class=\"form-control\" id=\"hqInstallationType\" required>\n    <option *ngFor=\"let type of list.hqInstallation\" [value]=\"type\">{{type}}</option>\n  </select>\n</div>\n\n<div class=\"form-group\">\n  <label for=\"flBuild\">Select FL Build</label>\n  <select class=\"form-control\" id=\"flBuild\" required>\n    <option *ngFor=\"let flBuild of flBuilds\" [value]=\"Build\">{{flBuild.name}}</option>\n  </select>\n</div>\n\n\n<hr/>\n"
+module.exports = "<div class=\"container\">\n  <h2>Deployment Form</h2>\n  <hr/>\n  <form #deploymentForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"hqBuild\">Select HQ Build</label>\n      <select class=\"form-control\" id=\"hqBuild\" required>\n        <option *ngFor=\"let hqBuild of hqBuilds\" [value]=\"Build\">{{hqBuild.name}}</option>\n      </select>\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"hqInstallationType\">Select HQ installation type</label>\n      <select class=\"form-control\" id=\"hqInstallationType\" required>\n        <option *ngFor=\"let type of list.hqInstallation\" [value]=\"type\">{{type}}</option>\n      </select>\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"flBuild\">Select FL Build</label>\n      <select class=\"form-control\" id=\"flBuild\" required>\n        <option *ngFor=\"let flBuild of flBuilds\" [value]=\"Build\">{{flBuild.name}}</option>\n      </select>\n    </div>\n\n    <button type=\"submit\" class=\"btn btn-success\"(click)=\"submitDeploymentform()\">Submit</button>\n\n    <hr/>\n\n  </form>\n</div>"
 
 /***/ }),
 
@@ -80,6 +80,8 @@ var AppComponent = (function () {
             _this.flBuilds = result;
         });
     };
+    AppComponent.prototype.submitDeploymentForm = function () {
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
@@ -103,15 +105,17 @@ var _a;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_service__ = __webpack_require__("../../../../../src/app/app.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_service__ = __webpack_require__("../../../../../src/app/app.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 // import { RouterModule, Routes } from '@angular/router';
@@ -126,14 +130,15 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__app_service__["a" /* AppService */]],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_4__app_service__["a" /* AppService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -247,7 +252,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
