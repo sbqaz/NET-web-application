@@ -60,7 +60,8 @@ namespace deployment_studie_job.Controllers
         public IEnumerable<HqBuild> GetFolderStructure()
         {
             List<HqBuild> files = new List<HqBuild>();
-            System.IO.DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Testfolder\headquarters");
+            // System.IO.DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Testfolder\headquarters");
+            System.IO.DirectoryInfo dirInfo = new DirectoryInfo(@"X:\Latest Builds\SitaWare HQ\6.7.0");
             // Get the subdirectories directly that is under the root.
 
             System.IO.DirectoryInfo[] dirInfos = dirInfo.GetDirectories("*.*");
@@ -80,7 +81,8 @@ namespace deployment_studie_job.Controllers
         public IEnumerable<HqBuild> GetFolderStructure()
         {
             List<HqBuild> files = new List<HqBuild>();
-            System.IO.DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Testfolder\frontline");
+            // System.IO.DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Testfolder\frontline");
+            System.IO.DirectoryInfo dirInfo = new DirectoryInfo(@"X:\Latest Builds\Frontline\Frontline-2.0-release");
             // Get the subdirectories directly that is under the root.
 
             System.IO.DirectoryInfo[] dirInfos = dirInfo.GetDirectories("*.*");

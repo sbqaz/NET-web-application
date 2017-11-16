@@ -1,7 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  
+
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <RuntimeIdentifiers>win81-x64;win81-x86;win7-x64;win8-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,4 +23,5 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  
 </Project>
