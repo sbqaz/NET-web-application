@@ -1,31 +1,10 @@
-<div class="container">
-  <h2>Deployment Form</h2>
-  <hr/>
-  <form #deploymentForm="ngForm">
-    <div class="form-group">
-      <label for="hqBuild">Select HQ Build</label>
-      <select class="form-control" id="hqBuild" required>
-        <option *ngFor="let hqBuild of hqBuilds" [value]="Build">{{hqBuild.name}}</option>
-      </select>
-    </div>
+<!-- <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/sdc">Single Build Deployment</a>
+</nav>
+<router-outlet></router-outlet>
 
-    <div class="form-group">
-      <label for="hqInstallationType">Select HQ installation type</label>
-      <select class="form-control" id="hqInstallationType" required>
-        <option *ngFor="let type of list.hqInstallation" [value]="type">{{type}}</option>
-      </select>
-    </div>
+<br> -->
 
-    <div class="form-group">
-      <label for="flBuild">Select FL Build</label>
-      <select class="form-control" id="flBuild" required>
-        <option *ngFor="let flBuild of flBuilds" [value]="Build">{{flBuild.name}}</option>
-      </select>
-    </div>
 
-    <button type="submit" class="btn btn-success">Submit</button> 
-<!-- (click)="submitDeploymentform()" -->
-    <hr/>
-
-  </form>
-</div>
+<app-single-deployment></app-single-deployment>

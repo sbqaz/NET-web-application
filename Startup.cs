@@ -35,6 +35,7 @@ namespace deployment_studie_job
             }
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            // app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseMvc();
         }
     }

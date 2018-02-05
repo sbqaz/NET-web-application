@@ -1,0 +1,67 @@
+<div class="container" [hidden]="submitted">
+  <h2>Deployment Form</h2>
+  <hr/>
+  <form (ngSubmit)="onSubmit()" #deploymentForm="ngForm">
+    <div class="form-group">
+      <label for="selectedEnv">Select Environment</label>
+      <select class="form-control" id="selectedEnv" required [(ngModel)]="env.environment" name="selectedEnv">
+        <option *ngFor="let type of list.testEnv" [value]="type">{{type}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="selectedhqbuild">Select HQ Build</label>
+      <select class="form-control" id="selectedhqbuild" required [(ngModel)]="env.hqbuild" name="selectedhqbuild">
+        <option *ngFor="let build of hqBuilds" [value]="build">{{build}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="selectedType">Select HQ Installation Type</label>
+      <select class="form-control" id="selectedType" required [(ngModel)]="env.hqInstallationType" name="selectedType">
+        <option *ngFor="let type of list.hqInstallation" [value]="type">{{type}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="selectedflbuild">Select FL Build</label>
+      <select class="form-control" id="selectedflbuild" required [(ngModel)]="env.flbuild" name="selectedflbuild">
+        <option *ngFor="let build of flBuilds" [value]="build">{{build}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <hr/>
+  </form>
+</div>
+
+
+<div class="container" [hidden]="!submitted">
+  <form (ngSubmit)="confirm()" #confirmForm="ngForm">
+    <h4>You submitted the following:</h4>
+    <div class="row">
+      <div class="col-xs-3">Test Environment</div>
+      <div class="col-xs-9  pull-left">{{ env.environment }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">HQ Build</div>
+      <div class="col-xs-9 pull-left">{{ env.hqbuild }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">HQ Installation Type</div>
+      <div class="col-xs-9 pull-left">{{ env.hqInstallationType }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">FL Build</div>
+      <div class="col-xs-9 pull-left">{{ env.flbuild }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    <button type="submit" class="btn btn-success">Confirm</button>
+  </form>
+</div>
+
+
+<br> Model value: {{ showTestBuild }}
+<br>
+<app-messages></app-messages>

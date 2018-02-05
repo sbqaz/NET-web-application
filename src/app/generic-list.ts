@@ -4,4 +4,15 @@ export class GenericList {
         'Active Directory',
         'Client Certificate'
     ];
+
+    testEnv = [
+        'HQ-Alpha',
+        'HQ-Bravo',
+        'HQ-Charlie',
+        'HQ-Delta',
+        'HQ-Echo',
+        'HQ-Foxtrot',
+        'HQ-Mike',
+        'HQ-November',
+    ];
 }

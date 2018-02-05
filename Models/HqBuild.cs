@@ -1,6 +1,6 @@
 namespace deployment_studie_job.Models
 {
-    public class HqBuild {
+    public class Build {
         public string Name {get; set;}
 
     }
