@@ -40,7 +40,7 @@ export class SingleDeploymentComponent implements OnInit {
 
   confirm(): void {
     this.appService.submitDeploymentForm(this.env).subscribe(result => {
-      console.log('this call was made');
+      console.log('Service called with deployment form was made');
     });
   }
 }

@@ -66,7 +66,7 @@ namespace deployment_studie_job.Controllers
     public class DeploymentController : Controller {
         [HttpPost]
         public IActionResult PostStuff([FromBody] TestEnvironment env) {
-            using (StreamWriter writer = new StreamWriter("C:\\Temp\\deploymentForm\\test.txt", true)) {
+            using (StreamWriter writer = new StreamWriter("X:\\Users\\soebo\\Test\\test.txt", true)) {//"C:\\Temp\\deploymentForm\\test.txt", true)) {
                 writer.WriteLine(env.environment);
                 writer.WriteLine(env.hqBuild);
                 writer.WriteLine(env.hqInstallationType);
